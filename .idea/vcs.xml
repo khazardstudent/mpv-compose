@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/buildscripts/deps/dav1d" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/buildscripts/deps/ffmpeg" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/buildscripts/deps/ffmpeg/_build-arm64/src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/buildscripts/deps/ffmpeg/_build-x64/src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/buildscripts/deps/ffmpeg/_build-x86/src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/buildscripts/deps/ffmpeg/_build/src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/buildscripts/deps/freetype2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/buildscripts/deps/freetype2/subprojects/dlg" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/buildscripts/deps/libass" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/buildscripts/deps/libplacebo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/buildscripts/deps/libplacebo/3rdparty/Vulkan-Headers" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/buildscripts/deps/libplacebo/3rdparty/fast_float" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/buildscripts/deps/libplacebo/3rdparty/glad" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/buildscripts/deps/libplacebo/3rdparty/jinja" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/buildscripts/deps/libplacebo/3rdparty/markupsafe" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/buildscripts/deps/libplacebo/demos/3rdparty/nuklear" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/buildscripts/deps/mpv" vcs="Git" />
+  </component>
+</project>
