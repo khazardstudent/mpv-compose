@@ -1,7 +1,7 @@
 #include <jni.h>
 #include <stdlib.h>
 
-#include <mpv/client.h>
+#include "mpv_client_api.h"
 
 #include "jni_utils.h"
 #include "log.h"

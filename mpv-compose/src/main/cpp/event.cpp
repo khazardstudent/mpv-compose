@@ -1,6 +1,6 @@
 #include <jni.h>
 
-#include <mpv/client.h>
+#include "mpv_client_api.h"
 
 #include "globals.h"
 #include "jni_utils.h"

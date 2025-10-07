@@ -52,10 +52,17 @@ fi
 
 # lua
 if [ ! -d lua ]; then
-	mkdir lua
-	$WGET https://www.lua.org/ftp/lua-$v_lua.tar.gz -O - | \
-		tar -xz -C lua --strip-components=1
+        mkdir lua
+        $WGET https://www.lua.org/ftp/lua-$v_lua.tar.gz -O - | \
+                tar -xz -C lua --strip-components=1
 fi
+
+# shaderc
+mkdir -p shaderc
+cat >shaderc/README <<'HEREDOC'
+shaderc sources are provided by the NDK
+see <ndk>/sources/third_party/shaderc
+HEREDOC
 
 # libplacebo
 [ ! -d libplacebo ] && git clone --recursive https://github.com/haasn/libplacebo

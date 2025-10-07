@@ -3,7 +3,7 @@
 
 #include <jni.h>
 #include <android/bitmap.h>
-#include <mpv/client.h>
+#include "mpv_client_api.h"
 
 extern "C" {
     #include <libswscale/swscale.h>

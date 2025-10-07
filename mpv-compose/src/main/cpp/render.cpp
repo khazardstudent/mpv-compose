@@ -1,6 +1,6 @@
 #include <jni.h>
 
-#include <mpv/client.h>
+#include "mpv_client_api.h"
 
 #include "jni_utils.h"
 #include "log.h"
@@ -11,7 +11,7 @@ extern "C" {
     jni_func(void, detachSurface);
 };
 
-static jobject surface;
+static jobject surface = nullptr;
 
 jni_func(void, attachSurface, jobject surface_) {
     CHECK_MPV_INIT();
@@ -19,7 +19,7 @@ jni_func(void, attachSurface, jobject surface_) {
     surface = env->NewGlobalRef(surface_);
     if (!surface)
         die("invalid surface provided");
-    int64_t wid = reinterpret_cast<intptr_t>(surface);
+    int64_t wid = static_cast<int64_t>(reinterpret_cast<intptr_t>(surface));
     int result = mpv_set_option(g_mpv, "wid", MPV_FORMAT_INT64, &wid);
     if (result < 0)
          ALOGE("mpv_set_option(wid) returned error %s", mpv_error_string(result));
@@ -33,6 +33,8 @@ jni_func(void, detachSurface) {
     if (result < 0)
          ALOGE("mpv_set_option(wid) returned error %s", mpv_error_string(result));
 
-    env->DeleteGlobalRef(surface);
-    surface = NULL;
+    if (surface != nullptr) {
+        env->DeleteGlobalRef(surface);
+        surface = nullptr;
+    }
 }
